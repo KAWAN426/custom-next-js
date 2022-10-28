@@ -1,0 +1,23 @@
+{
+  "name": "custom-next-js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "npx kill-port 8080 && start http://localhost:8080 && next start -p 8080",
+    "simul": "npx kill-port 3030 && start http://localhost:3030 && next dev -p 3030",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.5",
+    "babel-plugin-styled-components": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0"
+  }
+}
