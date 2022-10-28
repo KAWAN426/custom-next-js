@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "start": "npx kill-port 8080 && start http://localhost:8080 && next start -p 8080",
-    "simul": "npx kill-port 3030 && start http://localhost:3030 && next dev -p 3030",
-    "export": "next export"
+    "start": "npm run open && next start -p 8080",
+    "simul": "npm run open && next dev -p 8080",
+    "export": "next export",
+    "open": "npx kill-port 8080 && start http://localhost:8080/"
   },
   "dependencies": {
     "next": "13.0.0",
