@@ -16,7 +16,7 @@
     "react-dom": "latest",
     "styled-components": "latest",
     "babel-plugin-styled-components": "latest",
-    "@next/font": "latest",
+    "@next/font": "latest"
   },
   "devDependencies": {
     "eslint": "latest",
