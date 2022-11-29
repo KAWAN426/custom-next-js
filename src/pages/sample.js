@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
 export default function Sample() {
   return (
@@ -15,7 +14,7 @@ const Container = styled.div`
 `
 
 // SSR
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const originUrl = context.req.headers.host;
   const fetchUrl = `${originUrl?.search("http://") !== -1 ? originUrl : ("http://" + originUrl)}/api/hello`;
   const fetchResult = await fetch(fetchUrl).then(response => response.json());
@@ -28,7 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 }
 
 // ISR
-// export const getStaticProps: GetStaticProps = async () => {
+// export const getStaticProps = async () => {
 //   return {
 //     props: { data },
 //     revalidate: 6000,
@@ -36,7 +35,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 // }
 
 // SSG
-// export const getStaticProps: GetStaticProps = async () => {
+// export const getStaticProps = async () => {
 //   return {
 //     props: { data }
 //   }
