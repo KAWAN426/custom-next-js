@@ -1,7 +1,7 @@
 import '../globals.css'
 import { Inter } from '@next/font/google'
 
-const font = Inter();
+const font = Inter({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }) {
   return (
